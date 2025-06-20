@@ -1,114 +1,116 @@
 
 ````markdown
-# 🕵️‍♂️ Discord Bot with System Access Capabilities
+# 🤖 Discord System Bot
 
-This project is a Python-powered Discord bot with extended system-level capabilities for educational, administrative, or personal use. It includes functions like PowerShell command execution, desktop screenshot capture, file opening, and redirection to a humorous website (`amogus.io`).
+This is a multifunctional Python-based Discord bot designed to execute PowerShell commands, download and open files, take screenshots, start local programs, and open websites like [amogus.io](https://amogus.io) — all via Discord chat.
 
-> ⚠️ **Disclaimer**: This bot has the potential to control parts of the host system. Use responsibly and **never run or share this bot without full transparency and consent** from the target user.
+> ⚠️ **Security Warning**: This bot executes code and opens files on the machine it's running on. Use **only on systems you own or have permission to control**. Never run this on public or shared machines.
 
 ---
 
-## 📦 Requirements
+## 🧰 Features
 
-The bot uses the following Python libraries:
+| Command          | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| `!exec <cmd>`    | Executes a PowerShell command and returns the output.                      |
+| `!open <url>`    | Downloads a file from a URL and optionally opens it.                        |
+| `!start <path>`  | Starts or executes a file from a local path.                                |
+| `!ss`            | Takes a screenshot of the desktop and sends it to the channel.              |
+| `!sus`           | Opens [https://amogus.io](https://amogus.io) in the default web browser.    |
+| `!help`          | (Default help command from `discord.ext.commands`) Lists all commands.      |
 
-```python
-import discord
-from discord.ext import commands
-import os
-import logging
-import pyautogui
-import datetime
-import asyncio
-import textwrap
-import re
-import webbrowser
-import sys
-import subprocess
-from pathlib import Path
+---
+
+## 🚀 Setup
+
+### 🔧 Prerequisites
+
+- Python 3.8+
+- Discord bot token
+- A Windows system (uses PowerShell and `os.startfile`)
+
+### 📦 Installation
+
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/XEKOyt/Discord-bot.git
+   cd Discord-bot
 ````
 
-You can install the required dependencies with:
+2. Install dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-<details>
-<summary><code>requirements.txt</code> contents</summary>
+3. Create a `.env` or directly modify the `TOKEN` and `CHANNEL_ID` in the script.
+
+---
+
+### 📄 requirements.txt
 
 ```
 discord.py
 pyautogui
 ```
 
-</details>
+---
+
+## 🔐 Configuration
+
+In the Python file:
+
+```python
+TOKEN = ''  # Add your bot token here
+CHANNEL_ID = 69420  # Replace with the channel ID where the bot should send the startup message
+```
 
 ---
 
-## 🚀 Features and Commands
-
-The bot listens for specific command messages in Discord and responds as follows:
-
-| Command        | Description                                                          |
-| -------------- | -------------------------------------------------------------------- |
-| `!exec <cmd>`  | Executes the given PowerShell command and returns the output.        |
-| `!open <path>` | Opens a file or application at the specified local path.             |
-| `!sus`         | Opens [https://amogus.io](https://amogus.io) in the default browser. |
-| `!ss`          | Captures a screenshot of the user's current desktop.                 |
-| `!help`        | Displays a help menu listing all available commands.                 |
-
----
-
-## ⚙️ Running the Bot
-
-Make sure your environment is ready:
-
-1. Python 3.8+ installed
-2. Dependencies installed (`pip install -r requirements.txt`)
-3. A valid Discord bot token
-
-Then run the bot with:
+## 🏁 Running the Bot
 
 ```bash
 python bot.py
 ```
 
-Replace `bot.py` with the actual filename if different.
+You’ll see logs printed in the terminal and also saved to `bot.log`.
 
 ---
 
-## 🔐 Security & Ethics Warning
+## ⚠️ Legal & Ethical Use
 
-This bot gives control over the host system to a remote Discord channel. **Never use this bot for malicious purposes**. It is intended for **educational use only**.
+This bot has **remote access features**. Running this bot without informed user consent may violate privacy laws and Discord's Terms of Service.
+
+It is intended strictly for:
+
+* Educational purposes
+* Remote system automation on machines you control
 
 ---
 
-## 🧾 License
-
-This project is distributed under the MIT License. See `LICENSE` for more details.
-
----
-
-## 👀 Example
+## 🧪 Example Usage
 
 ```txt
-User: !exec Get-Process
-Bot : [Lists all running processes]
-
-User: !open C:/Windows/System32/notepad.exe
-Bot : ✅ File opened.
-
-User: !ss
-Bot : [Sends a screenshot image]
-
-User: !sus
-Bot : ✅ Amogus engaged.
-
-User: !help
-Bot : [Displays list of commands and usage]
+!exec Get-ChildItem C:\Users
+!open https://example.com/file.exe
+!start "C:/Windows/System32/notepad.exe"
+!ss
+!sus
 ```
 
 ---
 
-Made with ❤️ and a little bit of ✨sus✨.
+## 📜 License
+
+This project is licensed under the Do whatever you want but if theres a law case don't call me License.
+
+```
+
+---
+
+Let me know if you'd like:
+
+- A sample `.env` file format for safer config
+- A version that uses slash commands (`discord.app_commands`) instead of prefix commands
+- A version without logs
+```
