@@ -1,5 +1,3 @@
-
-````markdown
 # 🤖 Discord System Bot
 
 This is a multifunctional Python-based Discord bot designed to execute PowerShell commands, download and open files, take screenshots, start local programs, and open websites like [amogus.io](https://amogus.io) — all via Discord chat.
