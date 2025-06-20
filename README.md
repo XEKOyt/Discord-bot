@@ -33,7 +33,7 @@ This is a multifunctional Python-based Discord bot designed to execute PowerShel
    ```bash
    git clone https://github.com/XEKOyt/Discord-bot.git
    cd Discord-bot
-````
+   ```
 
 2. Install dependencies:
 
@@ -43,7 +43,6 @@ This is a multifunctional Python-based Discord bot designed to execute PowerShel
 
 3. Create a `.env` or directly modify the `TOKEN` and `CHANNEL_ID` in the script.
 
----
 
 ### 📄 requirements.txt
 
@@ -52,7 +51,6 @@ discord.py
 pyautogui
 ```
 
----
 
 ## 🔐 Configuration
 
@@ -63,7 +61,6 @@ TOKEN = ''  # Add your bot token here
 CHANNEL_ID = 69420  # Replace with the channel ID where the bot should send the startup message
 ```
 
----
 
 ## 🏁 Running the Bot
 
@@ -73,7 +70,6 @@ python bot.py
 
 You’ll see logs printed in the terminal and also saved to `bot.log`.
 
----
 
 ## ⚠️ Legal & Ethical Use
 
@@ -84,7 +80,6 @@ It is intended strictly for:
 * Educational purposes
 * Remote system automation on machines you control
 
----
 
 ## 🧪 Example Usage
 
@@ -96,15 +91,12 @@ It is intended strictly for:
 !sus
 ```
 
----
 
 ## 📜 License
 
 This project is licensed under the Do whatever you want but if theres a law case don't call me License.
 
 ```
-
----
 
 Let me know if you'd like:
 
