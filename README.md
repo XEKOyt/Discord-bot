@@ -112,10 +112,3 @@ Bot : [Displays list of commands and usage]
 ---
 
 Made with ❤️ and a little bit of ✨sus✨.
-
-```
-
----
-
-Let me know if you want this converted into a `requirements.txt` and `LICENSE` file or want a section added for environment variables (like the bot token).
-```
